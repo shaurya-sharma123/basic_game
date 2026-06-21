@@ -1,41 +1,53 @@
-# basic_game
-# Rock, Paper, Scissors (JS Console Game)
+# Rock, Paper, Scissors (DOM Edition)
 
-A classic 5-round game of Rock, Paper, Scissors played entirely in the browser console against a computer opponent. This project demonstrates core JavaScript concepts including functions, conditional logic, loops, variable scope, and basic user input handling.
-
----
+A classic interactive Rock, Paper, Scissors game built using HTML, CSS, and event-driven JavaScript. The game transitions traditional console-based logic into a dynamic browser User Interface (UI), tracking scores in real-time until a player reaches 5 points.
 
 ## 🚀 Features
 
-*   **Interactive Input:** Uses native browser `prompt()` to capture player moves.
-*   **Automated Opponent:** Computer logic utilizes `Math.random()` to dynamically select its choice each round.
-*   **Score Tracking:** Tracks player and computer scores across a 5-round match.
-*   **Robust Win/Loss Logic:** Handles wins, losses, ties, and normalizes user text input to avoid casing errors.
+- **Event-Driven UI:** No annoying browser prompts! Play seamlessly by clicking intuitive on-screen buttons.
+- **Dynamic DOM Updates:** Round outcomes and live scores are updated instantly using JavaScript DOM manipulation methods.
+- **Score Tracking:** Keeps a running tally of both the Human and Computer scores.
+- **Automatic Game Over:** Automatically declares an ultimate winner and disables controls once either player hits **5 points**.
 
 ---
 
-## 🛠️ Built With
+## 🛠️ Installation & Setup
 
-*   **JavaScript (ES6+)**
-    *   Arrow Functions (`const func = () => {}`)
-    *   Template Literals for clean logging
-    *   Conditional Statements (`if / else if / else`)
+1. **Clone or Download the Project:**
+   Save your `index.html`, `style.css` (optional), and `script.js` files together in a single folder.
 
----
+2. **Project Structure:**
+   Ensure your directory looks something like this:
+   ```text
+   ├── index.html
+   ├── script.js
+   └── README.md
 
-## 🎮 How to Play
+   un the Game:
+    Simply double-click the index.html file to open it in any modern web browser.
 
-1. Open your browser's **Developer Tools** (Press `F12` or right-click the page, click **Inspect**, and navigate to the **Console** tab).
-2. Paste the JavaScript code into the console and hit `Enter`.
-3. Follow the on-screen pop-up prompts to type your choice (`rock`, `paper`, or `scissors`).
-4. Watch the console to see the outcome of each round and the final game results!
+💻 Code Architecture
 
----
+The implementation leverages cleanly separated logic blocks:
 
-## 📝 Code Structure
+    State Variables: Tracks playerScore and computerScore globally to persist data across round intervals.
 
-*   `getRandom(max)`: Helper function to generate an index number for the computer.
-*   `getComputerChoice()`: Translates the random index into `"rock"`, `"paper"`, or `"scissors"`.
-*   `getHumanChoice()`: Prompts the player for input and returns their choice.
-*   `playRound(humanChoice, computerChoice)`: Compares choices, checks for a winner or tie, and increments the respective score.
-*   `playGame()`: The master function that loops the game for 5 rounds and prints the final victor.
+    DOM Integration: Dynamically creates a div element (#resultsContainer) and appends game status paragraphs straight to the HTML #container.
+
+    Game Engine (playRound): Evaluates selections against standard rules, updates score parameters, and manages win/loss conditions.
+
+    Computer AI (getComputerChoice): Utilizes pseudo-random number generation (Math.random()) to select an unpredictable choice among rock, paper, or scissors.
+
+    Control Handling (disableButtons): Safety mechanism to lock interaction once a champion is determined.
+
+📜 Rules of engagement
+
+    Rock beats Scissors
+
+    Paper beats Rock
+
+    Scissors beats Paper
+
+    Identical choices result in a Tie (no points awarded)
+
+    First to 5 points wins the game!
