@@ -26,29 +26,3 @@ A classic interactive Rock, Paper, Scissors game built using HTML, CSS, and even
    un the Game:
     Simply double-click the index.html file to open it in any modern web browser.
    ```
-
-💻 Code Architecture
-
-The implementation leverages cleanly separated logic blocks:
-
-    State Variables: Tracks playerScore and computerScore globally to persist data across round intervals.
-
-    DOM Integration: Dynamically creates a div element (#resultsContainer) and appends game status paragraphs straight to the HTML #container.
-
-    Game Engine (playRound): Evaluates selections against standard rules, updates score parameters, and manages win/loss conditions.
-
-    Computer AI (getComputerChoice): Utilizes pseudo-random number generation (Math.random()) to select an unpredictable choice among rock, paper, or scissors.
-
-    Control Handling (disableButtons): Safety mechanism to lock interaction once a champion is determined.
-
-📜 Rules of engagement
-
-    Rock beats Scissors
-
-    Paper beats Rock
-
-    Scissors beats Paper
-
-    Identical choices result in a Tie (no points awarded)
-
-    First to 5 points wins the game!
