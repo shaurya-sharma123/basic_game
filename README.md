@@ -25,6 +25,7 @@ A classic interactive Rock, Paper, Scissors game built using HTML, CSS, and even
 
    un the Game:
     Simply double-click the index.html file to open it in any modern web browser.
+   ```
 
 💻 Code Architecture
 
